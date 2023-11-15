@@ -509,6 +509,12 @@ config KINECTICS_XR_NORDIC
 	   this also parses the gpios and interrupts from device tree and sets
 	   the gpios and interrupt handler for handling the interrupt.
 
+config MMHARDWARE_DETECTION
+		tristate "Register xiaomi mmhardware detection module"
+		default n
+		help
+		  This adds support for mmhardware detection
+
 source "drivers/misc/rtimd-i2c/Kconfig"
 source "drivers/misc/c2port/Kconfig"
 source "drivers/misc/eeprom/Kconfig"
