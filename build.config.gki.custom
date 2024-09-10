@@ -15,7 +15,7 @@ HERMETIC_TOOLCHAIN=${HERMETIC_TOOLCHAIN:-1}
 
 . ${ROOT_DIR}/${KERNEL_DIR}/build.config.aarch64
 
-DEFCONFIG="gki_defconfig"
+DEFCONFIG="gki_defconfig vendor/parrot_GKI.config"
 
 MAKE_GOALS="${MAKE_GOALS}
 Image.gz
