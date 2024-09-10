@@ -2316,3 +2316,5 @@
   xhci_suspend
   xhci_update_erst_dequeue
   xhci_vendor_get_ops
+  find_first_bit
+  find_first_zero_bit
