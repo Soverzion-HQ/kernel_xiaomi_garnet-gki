@@ -53,6 +53,7 @@
    NUL too in big-endian, byte-reverse the data before the NUL check.  */
 
 
+	.p2align 6
 SYM_FUNC_START_WEAK_PI(strcmp)
 	sub	off2, src2, src1
 	mov	zeroones, REP8_01
