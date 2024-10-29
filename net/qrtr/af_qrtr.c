@@ -2124,17 +2124,23 @@ static int __init qrtr_proto_init(void)
 		return rc;
 
 	rc = sock_register(&qrtr_family);
-	if (rc) {
-		proto_unregister(&qrtr_proto);
-		return rc;
-	}
+	if (rc)
+		goto err_proto;
 
-	qrtr_ns_init();
+	rc = qrtr_ns_init();
+	if (rc)
+		goto err_sock;
 
 	qrtr_backup_init();
 	qrtr_debug_init();
 
-	return rc;
+    return 0;  // Mengembalikan 0 jika tidak ada error
+
+err_sock:
+    sock_unregister(qrtr_family.family);  // Bersihkan registrasi socket jika `qrtr_ns_init` gagal
+
+err_proto:
+    return -1;  // Mengembalikan -1 untuk menunjukkan error
 }
 postcore_initcall(qrtr_proto_init);
 
