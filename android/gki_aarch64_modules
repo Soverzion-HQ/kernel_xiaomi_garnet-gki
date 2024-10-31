@@ -117,6 +117,7 @@ drivers/soc/qcom/panel_event_notifier.ko
 drivers/soc/qcom/tmecom/tmecom-intf.ko
 drivers/soc/qcom/hung_task_enh.ko
 drivers/soc/qcom/qfprom-sys.ko
+drivers/soc/qcom/vh_fs/vh_fs.ko
 drivers/regulator/qti-fixed-regulator.ko
 drivers/regulator/proxy-consumer.ko
 drivers/regulator/qcom_pm8008-regulator.ko
